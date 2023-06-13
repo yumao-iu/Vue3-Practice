@@ -1,4 +1,4 @@
-# vue3-practice(vue3+pinia+expres+mysql)
+# vue3-practice(vue3+pinia+express+mysql)
 
 1.vue3.txt文件导入到本地数据库，server/config.js是数据库配置
 
