@@ -1,0 +1,234 @@
+-- MySQL dump 10.13  Distrib 5.7.31, for Win64 (x86_64)
+--
+-- Host: localhost    Database: vue3
+-- ------------------------------------------------------
+-- Server version	5.7.31
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (1,'123456','123456','2022-12-31 21:15:34',NULL);
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `book`
+--
+
+DROP TABLE IF EXISTS `book`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mid` int(11) DEFAULT NULL,
+  `uid` int(11) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `sort` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tags` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `des` text,
+  `price` varchar(15) DEFAULT NULL,
+  `image` text,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `book`
+--
+
+LOCK TABLES `book` WRITE;
+/*!40000 ALTER TABLE `book` DISABLE KEYS */;
+INSERT INTO `book` VALUES (1,NULL,0,'管理员','2023-02-11 00:12:40','环境','环境','太虚公寓','被上流社会恨之入骨，在民众中有无上地，一代强者星尘大帝的复仇之路','99.99','lyvwskdgff.jpeg','{\"color\":\"177,146,146\",\"state\":1,\"buyNum\":1,\"lookNum\":0,\"collectNum\":8120,\"ratio\":0.59,\"tagData\":\"[{\\\"text\\\":\\\"八千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(2,NULL,0,'管理员','2023-02-11 00:13:32','科学','科学','天才狂医','叶凡机缘巧合下成为了阎罗王，获得可升级的神秘地府系统','99.99','yulutwuoxs.jpeg','{\"color\":\"86,65,68\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.59}'),(3,NULL,0,'管理员','2023-02-11 00:13:40','劳动','劳动','诸天至尊','暑期打工的陈东卿竟然发生了意外，但是他的意识却进入了一个奇怪的空间','99.99','mfhuhpvzpj.jpeg','{\"color\":\"120,81,83\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56}'),(4,NULL,0,'管理员','2023-02-11 00:13:48','航空','航空','我是大仙尊','讲述的是一位生活在西元2011年的少女叶冰瑶','99.99','siyousbvqp.jpeg','{\"color\":\"81,52,52\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56}'),(5,NULL,0,'管理员','2023-02-11 00:13:54','航天','航天','最强升级','当清冷的眸子睁开，她已是21世纪最危险的天才','99.99','dqirglkiod.jpeg','{\"color\":\"129,85,85\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":3123,\"ratio\":0.56,\"tagData\":\"[{\\\"text\\\":\\\"三千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(6,NULL,0,'管理员','2023-02-11 00:14:06','交通','交通','毒医嫡女','拥有极佳运动天赋的学霸江杉不顾家人劝阻放弃','69.99','duiuelhnlu.jpeg','{\"color\":\"80,72,72\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.58}'),(7,NULL,0,'管理员','2023-02-11 00:14:20','运输','运输','逆转仙途','故事男主角秦羽是一名生活于末世灾难100年后的丧尸猎人','69.99','xtndyciqwl.jpeg','{\"color\":\"64,60,65\",\"state\":1,\"buyNum\":1210,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56,\"tagData\":\"[{\\\"text\\\":\\\"一千购买\\\",\\\"color\\\":\\\"27, 1, 222\\\"}]\"}'),(8,NULL,0,'管理员','2023-02-11 00:14:37','技术','技术','嫡女诸侯','爱你却不能告诉你。陆瑾年和乔安好因为父母之命','69.99','qvwkbmdnfd.jpeg','{\"color\":\"79,69,60\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56}'),(9,NULL,0,'管理员','2023-02-11 00:14:48','工业','工业','三眼哮天录','慕枝枝是一只普通的女孩，但她养了一只不普通的招财猫','69.99','bjqsqexxhi.jpeg','{\"color\":\"86,66,58\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":1021,\"ratio\":0.56,\"tagData\":\"[{\\\"text\\\":\\\"一千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(10,NULL,0,'管理员','2023-02-11 00:14:58','农业','农业','逆天邪神','讲述了基因克隆的三姐妹朝颜、夕颜','69.99','bweykrflfv.jpeg','{\"color\":\"68,60,57\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56}'),(11,NULL,0,'管理员','2023-02-11 00:15:34','卫生','卫生','网游之近战法师','在异世重生后，我成为了奥格利帝国的唯一皇女。然而从出生的那一刻起','129.90','sguugmndri.jpeg','{\"color\":\"21,39,105\",\"state\":1,\"buyNum\":1213,\"lookNum\":0,\"collectNum\":12125,\"ratio\":1,\"tagData\":\"[{\\\"text\\\":\\\"一万收藏\\\",\\\"color\\\":\\\"64,158,255\\\"},{\\\"text\\\":\\\"一千购买\\\",\\\"color\\\":\\\"27, 1, 222\\\"}]\"}'),(12,NULL,0,'管理员','2023-02-11 00:15:40','医药','医药','绝世武神','一代天才玄脉受损成为废物，家族摒弃','129.90','olutfxetzg.jpeg','{\"color\":\"34,40,98\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":3021,\"ratio\":1,\"tagData\":\"[{\\\"text\\\":\\\"三千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(13,NULL,0,'管理员','2023-02-11 00:15:46','生物','生物','灵剑尊','前世沦为贱奴卖身青楼受尽屈辱，撞柱身亡，却意外重生少年时','129.90','zksxcfwqpz.jpeg','{\"color\":\"230,207,198\",\"state\":1,\"buyNum\":532,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.97,\"tagData\":\"[{\\\"text\\\":\\\"五百购买\\\",\\\"color\\\":\\\"27, 1, 222\\\"}]\"}'),(14,NULL,0,'管理员','2023-02-11 00:15:52','地球','地球','星武神诀','当红偶像变人类？！之后竟然误入黑粉','129.90','fpmrozlhtm.jpeg','{\"color\":\"236,197,198\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":1,\"ratio\":0.95,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(15,NULL,0,'管理员','2023-02-11 00:15:58','天文','天文','武神主宰','讲述了基因克隆的三姐妹朝颜、夕颜、月见发生的一件件事','49.99','inhexhvcej.jpeg','{\"color\":\"18,57,164\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.97,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(16,NULL,0,'管理员','2023-02-11 00:16:03','化学','化学','天才后卫','一个是叱咤仙路的风云上神，一个是废材资质修真菜鸟','49.99','byvrenqhoj.jpeg','{\"color\":\"226,223,225\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.03,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(17,NULL,0,'管理员','2023-02-11 00:16:10','数理','数理','枪火天灵','代灵魂重生在明朝，大家都是穿越打怪升级，权谋争斗','49.99','ncstvmerxq.jpeg','{\"color\":\"32,37,68\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.03,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(18,NULL,0,'管理员','2023-02-11 00:16:15','自然','自然','旋风少女','她，长公主府唯一的嫡女，却是举国皆知的废物','12.99','lgkwzynwmf.jpeg','{\"color\":\"27,36,132\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.03,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(20,NULL,0,'管理员','2023-02-11 00:26:49','劳动','劳动','噬龙蚁','平行世界开始试运行。体育老师顾飞用学生阿发送给他的账号登录游戏后发现','12.99','edxkfeebhn.jpeg','{\"color\":\"62,88,105\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.25}'),(21,NULL,0,'管理员','2023-02-11 00:26:57','航空','航空','地府我开的','一不小心捡到情商缺根弦的超级大祸水','12.99','jcosbrjeey.jpeg','{\"color\":\"51,57,66\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.28}'),(22,NULL,0,'管理员','2023-02-11 00:27:04','环境','环境','我是主脚','但贱名加贱命的王小二却因为腿伤而混的连亲戚朋友','12.99','ducfembytj.jpeg','{\"color\":\"48,71,84\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.25,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(23,NULL,0,'管理员','2023-02-11 00:27:12','科学','科学','篮球之杀手本色','叶凡机缘巧合下成为了阎罗王','9.99','yszbyetrty.jpeg','{\"color\":\"54,67,77\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.27}'),(24,NULL,0,'管理员','2023-02-11 00:29:27','航空','航空','今天也似溜过','强者遇袭，重返少年时代，成为当年弱小的废物少主','9.99','idlnhgnien.jpeg','{\"color\":\"46,32,72\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.56,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(25,NULL,0,'管理员','2023-02-11 00:29:49','交通','交通','皇帝的独生女','网游遭遇修真，还有什么是不可能的呢','9.99','lwegrhptob.jpeg','{\"color\":\"122,159,191\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.41}'),(26,NULL,0,'管理员','2023-02-11 00:29:55','航天','航天','百魂灵约','本是普通大学生的林海，在微信更新后','9.99','mzpopfuxdl.jpeg','{\"color\":\"145,181,207\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":3213,\"ratio\":0.41,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"},{\\\"text\\\":\\\"三千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(27,NULL,0,'管理员','2023-02-11 00:30:01','科学','科学','王者名昭','天元大陆，有大能力者可移山倒海，踢星踏月','5.99','unwjyocteo.jpeg','{\"color\":\"91,132,179\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.5}'),(28,NULL,0,'管理员','2023-02-11 00:30:08','劳动','劳动','哥就是踢的远','男主以双重身份接近女主，女主误以为男主是两个人','5.99','ibxtqdexmi.jpeg','{\"color\":\"173,172,174\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.32,\"tagData\":\"[{\\\"text\\\":\\\"一千收藏\\\",\\\"color\\\":\\\"64,158,255\\\"}]\"}'),(29,NULL,0,'管理员','2023-02-11 00:30:16','农业','农业','天降贤淑男','云青岩从凡人界意外坠入仙界。三千年后，他成为叱咤仙界的云帝','5.99','yvqeshxydt.jpeg','{\"color\":\"47,53,47\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.23}'),(30,NULL,0,'管理员','2023-02-11 16:38:05','航空','航空','簪中录','叶凡机缘巧合下成为了阎罗王，获得可升级的神秘地府系统','59.99','hmkdmbyprh.jpeg','{\"color\":\"60,40,57\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.25,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(31,NULL,0,'管理员','2023-02-11 16:38:11','环境','环境','超级游戏狼人杀','公主府唯一的嫡女，却是举国皆知的废物！ 当清冷的眸子睁开，她已是','59.99','jpyuorjsbd.jpeg','{\"color\":\"214,224,227\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":0.65}'),(32,NULL,0,'管理员','2023-02-11 16:38:17','运输','运输','美人为馅','但是他的意识却进入了一个奇怪的空间','59.99','njqqqpsxbe.jpeg','{\"color\":\"226,188,188\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.3,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(33,NULL,0,'管理员','2023-02-11 16:38:25','劳动','劳动','神探肖羽','讲述的是一位生活在西元2011年的少女','59.99','emwunwiwus.jpeg','{\"color\":\"106,30,38\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.33}'),(34,NULL,0,'管理员','2023-02-11 16:38:31','科学','科学','寻找前世之旅','不顾家人劝阻放弃入读重点中学，义无反顾的选择','59.99','qblpmsxbvr.jpeg','{\"color\":\"20,25,34\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.33}'),(35,NULL,0,'管理员','2023-02-11 16:38:37','数理','数理','妖神记','故事男主角秦羽是一名生活于末世灾难100年后的','59.99','qofbbmemyv.jpeg','{\"color\":\"166,74,55\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.33,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}'),(36,NULL,0,'管理员','2023-02-11 16:38:42','卫生','卫生','偷星九月天','爱你却不能告诉你。陆瑾年和乔安好因为父母之命','59.99','qcttdtxdnq.jpeg','{\"color\":\"191,201,223\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.33}'),(37,NULL,0,'管理员','2023-02-11 16:38:46','农业','农业','皇帝的独生女','《穿越西元3000后》讲述的是一位生活在西元2011年的','59.99','koqdtfxgfy.jpeg','{\"color\":\"84,110,114\",\"state\":1,\"buyNum\":0,\"lookNum\":0,\"collectNum\":0,\"ratio\":1.43,\"tagData\":\"[{\\\"text\\\":\\\"新书推荐\\\",\\\"color\\\":\\\"225,6,2\\\"}]\"}');
+/*!40000 ALTER TABLE `book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `buy`
+--
+
+DROP TABLE IF EXISTS `buy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `buy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `bid` int(11) DEFAULT NULL,
+  `uid` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `des` text,
+  `num` int(11) DEFAULT '0',
+  `image` varchar(255) DEFAULT NULL,
+  `price` text,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `buy`
+--
+
+LOCK TABLES `buy` WRITE;
+/*!40000 ALTER TABLE `buy` DISABLE KEYS */;
+INSERT INTO `buy` VALUES (101,7,1,'逆转仙途','故事男主角秦羽是一名生活于末世灾难100年后的丧尸猎人',1,'xtndyciqwl.jpeg','69.99','2023-02-11 17:06:29',NULL),(100,13,1,'灵剑尊','前世沦为贱奴卖身青楼受尽屈辱，撞柱身亡，却意外重生少年时',1,'zksxcfwqpz.jpeg','129.90','2023-02-11 17:06:21',NULL),(99,11,1,'网游之近战法师','在异世重生后，我成为了奥格利帝国的唯一皇女。然而从出生的那一刻起',1,'sguugmndri.jpeg','129.90','2023-02-11 17:06:13',NULL),(98,1,1,'太虚公寓','被上流社会恨之入骨，在民众中有无上地，一代强者星尘大帝的复仇之路',1,'lyvwskdgff.jpeg','99.99','2023-02-11 17:04:50',NULL);
+/*!40000 ALTER TABLE `buy` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `love`
+--
+
+DROP TABLE IF EXISTS `love`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `love` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) DEFAULT NULL,
+  `gid` int(11) DEFAULT NULL,
+  `des` text,
+  `price` text,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=161 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `love`
+--
+
+LOCK TABLES `love` WRITE;
+/*!40000 ALTER TABLE `love` DISABLE KEYS */;
+INSERT INTO `love` VALUES (160,1,1,'被上流社会恨之入骨，在民众中有无上地，一代强者星尘大帝的复仇之路','99.99','2023-02-11 17:07:29',NULL),(158,1,14,'当红偶像变人类？！之后竟然误入黑粉','129.90','2023-02-11 17:05:21',NULL),(159,1,11,'在异世重生后，我成为了奥格利帝国的唯一皇女。然而从出生的那一刻起','129.90','2023-02-11 17:06:36',NULL);
+/*!40000 ALTER TABLE `love` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mess`
+--
+
+DROP TABLE IF EXISTS `mess`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mess` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(100) DEFAULT NULL,
+  `content` text,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mess`
+--
+
+LOCK TABLES `mess` WRITE;
+/*!40000 ALTER TABLE `mess` DISABLE KEYS */;
+INSERT INTO `mess` VALUES (1,'swiper','1,6','2023-01-31 21:09:56',NULL),(2,'recommend','11,12,13,14,15,16,17,18','2023-01-31 21:11:21',NULL),(3,'headImg','fyrjfluukc.jpeg','2023-02-03 20:45:24',NULL);
+/*!40000 ALTER TABLE `mess` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `notice`
+--
+
+DROP TABLE IF EXISTS `notice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` text,
+  `message` text NOT NULL,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `notice`
+--
+
+LOCK TABLES `notice` WRITE;
+/*!40000 ALTER TABLE `notice` DISABLE KEYS */;
+INSERT INTO `notice` VALUES (7,'0',' 寒假期间，图书馆常用电子资源照常提供服务，馆际互借与查收查引等暂停服务。 ','2023-01-30 19:29:06','');
+/*!40000 ALTER TABLE `notice` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `buy` text,
+  `love` text,
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `email` varchar(50) DEFAULT NULL,
+  `extra` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'羽毛','123123','123123','1,11,13,7','14,11,1','2022-12-31 21:15:05','1211123@qq.com','{\"state\":1,\"price\":570.22,\"profile\":\"default.jpg\",\"address\":\"外星人-火星\",\"buyNum\":22,\"collectNum\":11}');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-02-11 17:21:30
