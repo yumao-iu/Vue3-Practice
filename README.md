@@ -8,4 +8,4 @@
 
 # Practice-Preview
 
-https://jsd.onmicrosoft.cn/gh/yumao-iu/Vue3-Practive/preview.jpg
+https://jsd.onmicrosoft.cn/gh/yumao-iu/Vue3-Practice/preview.jpg
